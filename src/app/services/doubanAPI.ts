@@ -22,4 +22,19 @@ export class ApiService {
     groupList(data): Observable<any> {
         return this.http.post('http://localhost:3001/api/group', data).map(res => res.json());
     }
+
+    // 电影: theatreHot  theatreFreeNew theatreNew
+
+    theatreHot(data): Observable<any> {
+        return this.http.post('http://localhost:3001/api/theatreHot', data).map(res => res.json());
+    }
+
+    theatreFreeNew(data): Observable<any> {
+        return this.http.post('http://localhost:3001/api/theatreFreeNew', data).map(res => res.json());
+    }
+
+    theatreNew(data): Observable<any> {
+        return this.http.post('http://localhost:3001/api/theatreNew', data).map(res => res.json());
+    }
+
 }

@@ -1,26 +1,9 @@
 <div [@fadeIn]>
-  <h2>Reserve page</h2>
-  <weui-picker placeholder="Pick a item" [groups]="itemGroup" [options]="{cancel:'取消', confirm:'确定', backdrop: true}"></weui-picker>
-
-  <br>
-  <button (click)="child.childName = this.childName">模板变量</button>
-  <div>
-    <p>子组件传递过来的值: name: {{name}},age: {{age}}</p>
+  <app-header title="电影"></app-header>
+  <div class="main-container">
+    
   </div>
-  <app-child account="will" (send)="getData($event)" #child></app-child>
-
-  <!-- 注意 Angular4 已变为ng-template -->
-  <ng-template #tpl>
-    <div>
-      <div>开始</div>
-      <h3>TemplateRef 和 ViewContainerRef 生成的</h3>
-      <span>结束</span>
-    </div>
-  </ng-template>
-
-  <h2 (click)="goChildPage()">goto chlidPage</h2>
-
-  <router-outlet></router-outlet>
+  <app-nav-tab></app-nav-tab>
 </div>
 
 

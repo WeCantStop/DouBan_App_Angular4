@@ -9,8 +9,7 @@ const routes: Routes = [
         path: '',
         component: ReserveComponent,
         children: [
-            {path: 'child', component: ChildpageComponent},
-            {path: '', redirectTo: 'child', pathMatch: 'full'}
+            {path: 'child', component: ChildpageComponent}
         ]
     },
 ];

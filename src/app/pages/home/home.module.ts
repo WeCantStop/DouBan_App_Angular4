@@ -1,17 +1,16 @@
+import { HeaderComponent } from './../../common/header/header.component';
 import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
+import { CommonModule } from '@angular/common';
 
-import {Http} from '@angular/http';
+import { Http} from '@angular/http';
 
-import {TranslateModule, TranslateLoader} from 'ng2-translate/ng2-translate';
-import {createTranslateLoader} from '../../translate/translateLoader';
+import { TranslateModule, TranslateLoader } from 'ng2-translate/ng2-translate';
+import { createTranslateLoader } from '../../translate/translateLoader';
 
-import {HomeComponent} from './home.component';
-import {HomeRoutingModule} from './home.routing';
-import {HeaderComponent} from '../../common/header/header.component';
-import {NavTabComponent} from '../../common/nav-tab/nav-tab.component';
-
-import {ReserveModule} from '../reserve/reserve.module';
+import { HomeComponent } from './home.component';
+import { HomeRoutingModule } from './home.routing';
+import { CommonsModule } from './../../common/commons.module';
+import { NavTabComponent } from '../../common/nav-tab/nav-tab.component';
 
 
 @NgModule({
@@ -23,9 +22,9 @@ import {ReserveModule} from '../reserve/reserve.module';
             useFactory: (createTranslateLoader),
             deps: [Http]
         }),
-        ReserveModule,
+        CommonsModule
     ],
-    declarations: [HomeComponent, HeaderComponent, NavTabComponent]
+    declarations: [HomeComponent]
 })
 export class HomeModule {
 }

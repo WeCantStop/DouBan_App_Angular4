@@ -1,0 +1,7 @@
+<!Doctype html>
+<div class="nav-tab">
+  <div class="nav-item" *ngFor="let nav of navs" (click)="selectNav(nav.target)">
+    <p class="icon" [ngClass]="nav.icon"></p>
+    <p class="text">{{nav.text}}</p>
+  </div>
+</div>

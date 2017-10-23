@@ -1,0 +1,14 @@
+<!Doctype html>
+<header class="header">
+  <div class="header-inner">
+    <div class="header-left" (click)="this.clickLeft() ">
+      <span>{{leftText}}</span>
+      <span *ngIf="showBack" class="icon icon-angle-left"></span>
+    </div>
+    <!-- <div class="header-right">品牌</div> -->
+  </div>
+  <div class="header-title">
+    <h1 *ngIf="!headerImg">{{title}}</h1>
+    <img *ngIf="headerImg" [src]="headerImg">
+  </div>
+</header>

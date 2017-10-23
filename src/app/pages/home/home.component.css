@@ -1,0 +1,43 @@
+.header-title h1 {
+    color: #00b600
+}
+
+.article-list .article-title {
+    font-size: 17px;
+    line-height: 1.41;
+    color: #494949;
+    margin-bottom: 6px;
+}
+
+.    .article-item {
+    padding: 25px 18px 25px 18px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #f1f1f1;
+}
+.article-list .articl-desc {
+    padding-right: 10px;
+    color: #aaa;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.table .td {
+    width: 75%;
+    float: left
+}
+.table .img-wrapper {
+    width: 25%;
+}
+
+.img-wrapper {
+    width: 25%;
+    overflow: hidden;
+}
+.article-from {
+    margin-top: 10px;
+}
+.article-from p{
+    display: inline-block;
+    font-size: 12px;
+    color: #ccc;
+}

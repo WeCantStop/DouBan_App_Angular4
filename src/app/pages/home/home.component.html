@@ -1,0 +1,23 @@
+<div [@fadeIn]>
+    <app-header title="My test"></app-header>
+    <div class="main-container">
+        <ul class="article-list">
+            <li class="article-item" *ngFor="let article of articles" (click)="goArticle(article)">
+                <div class="table">
+                    <div class="td">
+                        <h3 class="article-title">{{article.title}}</h3>
+                        <p class="articl-desc ellipsis3">{{article.target.desc}}</p>
+                    </div>
+                    <div class="img-wrapper td">
+                        <img class="full-width-img" src="{{article.target.cover_url}}">
+                    </div>
+                </div>
+                <div class="article-from clearfix">
+                    <p class="author fl">by {{article.target.author.name}}</p>
+                    <p class="from-item fr ">{{article.source_cn}}</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <app-nav-tab></app-nav-tab>
+</div>

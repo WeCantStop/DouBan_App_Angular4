@@ -1,0 +1,25 @@
+h2 {
+    text-align: center;
+}
+
+.edit-user-panel label{
+    display: block;
+    margin-bottom: 10px;
+}
+
+.submit-btn, .back-btn {
+    height: 30px;
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 5px;
+    line-height: 30px;
+    background: #000000;
+    text-align: center;
+    color: #FFF;
+}
+
+.back-btn {
+    background: #CCC;
+    margin-top: 10px;
+    color: #000;
+}

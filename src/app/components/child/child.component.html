@@ -1,0 +1,11 @@
+<!Doctype html>
+<div class="child-wrapper">
+    <p heightLight showConsole="Hello will">Child Component</p>
+    <p>父组件传递过来的值 => {{account}}</p>
+    <p>name: {{name}}</p>
+    <p>age: {{age}}</p>
+    <p #testRef># ViewRef test</p>
+    <button (click)="sendToParent()">传值给父组件</button>
+    <p>父组件通过模板变量传过来的值 => {{childName}}</p>
+</div>
+

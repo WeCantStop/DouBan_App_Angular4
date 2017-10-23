@@ -1,0 +1,21 @@
+.username {
+  width: 49%;
+  text-align: center;  
+  display: inline-block;
+}
+
+.delBtn {
+  width: 49%;
+  text-align: center;
+  background-color: #ccc;  
+  display: inline-block;
+}
+
+.user-item {
+  margin-top: 5px;
+  border: 1px solid #cccccc;
+}
+
+.user-input {
+  border: 1px solid #ccc;
+}

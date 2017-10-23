@@ -1,0 +1,20 @@
+<h2>User Detail Page</h2>
+<h3>用户名：{{userInfo.name}}</h3>
+<h3>用户年龄：{{userInfo.age || '未填写'}}</h3>
+<h3>用户性别：{{userInfo.gender || '未填写'}}</h3>
+<h3>用户家乡：{{userInfo.homeTown || '未填写'}}</h3>
+<h3>编辑用户信息</h3>
+<div class="edit-user-panel">
+    <label>年龄：
+        <input type="text" name="age" [(ngModel)]="userInfo.age" placeholder="请输入年龄">
+    </label>
+    <label>性别：
+        <input type="text" name="gender" [(ngModel)]="userInfo.gender" placeholder="请输入性别">
+    </label>
+
+    <label>家乡：
+        <input type="text" name="homeTown" [(ngModel)]="userInfo.homeTown" placeholder="请输入家乡">
+    </label>
+    <div class="submit-btn" (click)="saveUserDetail(this.userInfo)">提交资料</div>
+    <div class="back-btn" (click)="goBack()">后退</div>    
+</div>

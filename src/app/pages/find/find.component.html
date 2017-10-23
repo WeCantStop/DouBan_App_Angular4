@@ -1,0 +1,15 @@
+<!Doctype html>
+<h2>Users Page!</h2>
+<div class="action-panel">
+  <input type="text" class="user-input" [(ngModel)]="userName" (keyup)="addUser($event,'click')">
+  <button (click)="addUser($event)">Add User</button>
+</div>
+
+<div class="show-container">
+  <ul>
+    <li class="user-item" *ngFor="let user of users">
+      <span class="username" (click)="goUserDetail(user._id)" [id]="user._id">{{user.name}}</span>
+      <span class="delBtn" (click)="delUser(user)">Del</span>
+    </li>
+  </ul>
+</div>

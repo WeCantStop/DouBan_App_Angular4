@@ -9,18 +9,24 @@ import { ApiService } from '../../services/doubanAPI';
     animations: [FadeIn]
 })
 export class ReserveComponent implements OnInit {
-
+    public  FreeNewMovieData;
+    public  NewMovieData;
+    public hotMovieData;
     constructor(public apiService: ApiService) { }
 
     ngOnInit() {
+        this.hotMovieData = {
+            subject_collection: {name: ''},
+            subject_collection_items: []
+        };
         this.apiService.theatreHot({}).subscribe(res => {
-            console.log(res);
+            this.hotMovieData = res;
         });
         this.apiService.theatreFreeNew({}).subscribe(res => {
-            console.log(res);
+            this.FreeNewMovieData = res;
         });
-        this.apiService.theatreNew({}).subscribe(res => {
-            console.log(res);
+        this.apiService.theatreFreeNew({}).subscribe(res => {
+            this.NewMovieData = res;
         });
     }
 

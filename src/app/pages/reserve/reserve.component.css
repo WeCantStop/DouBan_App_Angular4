@@ -1,0 +1,30 @@
+.main-container .hot-movie .title h2,
+.main-container .hot-movie .title span {
+    display: inline-block;
+}
+.main-container .hot-movie .title {
+    padding: 10px 20px;
+}
+.main-container .hot-movie .title h2 {
+    font-size: 17px;
+    float: left;
+}
+.main-container .hot-movie .title span {
+    float: right;
+    color: #42bd56;
+}
+.movie-list {
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+.movie-item-wrapper {
+    width: 100%;
+}
+.movie-item {
+    float: left;
+    width: 50px;
+    display: inline-block;
+}
+.movie-item img {
+    width: 100%;
+}

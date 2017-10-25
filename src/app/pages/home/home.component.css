@@ -35,6 +35,6 @@
 }
 .article-from p{
     display: inline-block;
-    font-size: 12px;
+    font-size: .2rem;
     color: #ccc;
 }

@@ -9,8 +9,8 @@ import { ApiService } from '../../services/doubanAPI';
     animations: [FadeIn]
 })
 export class ReserveComponent implements OnInit {
-    public  FreeNewMovieData;
-    public  NewMovieData;
+    public  freeNewMovieData;
+    public  newMovieData;
     public hotMovieData;
     constructor(public apiService: ApiService) { }
 
@@ -19,14 +19,22 @@ export class ReserveComponent implements OnInit {
             subject_collection: {name: ''},
             subject_collection_items: []
         };
+        this.freeNewMovieData = {
+            subject_collection: {name: ''},
+            subject_collection_items: []
+        };
+        this.newMovieData = {
+            subject_collection: {name: ''},
+            subject_collection_items: []
+        };
         this.apiService.theatreHot({}).subscribe(res => {
             this.hotMovieData = res;
         });
         this.apiService.theatreFreeNew({}).subscribe(res => {
-            this.FreeNewMovieData = res;
+            this.freeNewMovieData = res;
         });
-        this.apiService.theatreFreeNew({}).subscribe(res => {
-            this.NewMovieData = res;
+        this.apiService.theatreNew({}).subscribe(res => {
+            this.newMovieData = res;
         });
     }
 

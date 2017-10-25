@@ -8,8 +8,8 @@ import { Observable } from 'rxjs';
 export class ApiService {
     /** 设置请求头 **/
     headers = new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded');
-    constructor(private http: Http) {
-    }
+    constructor(
+        private http: Http) { }
 
     initData(data): Observable<any> {
         return this.http.post('http://localhost:3001/api/index', data).map(res => res.json());

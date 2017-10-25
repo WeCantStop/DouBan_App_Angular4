@@ -4,7 +4,7 @@ import { ReserveRoutingModule } from './reserve.routing.module';
 
 import { ReserveComponent } from './reserve.component';
 import { ChildpageComponent } from './childpage/childpage.component';
-import { CommonsModule } from './../../common/commons.module';
+import { CommonsModule } from '../../common/commons.module';
 
 @NgModule({
   imports: [

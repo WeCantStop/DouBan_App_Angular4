@@ -15,7 +15,13 @@ export class ReserveComponent implements OnInit {
     ngOnInit() {
         this.apiService.theatreHot({}).subscribe(res => {
             console.log(res);
-        })
+        });
+        this.apiService.theatreFreeNew({}).subscribe(res => {
+            console.log(res);
+        });
+        this.apiService.theatreNew({}).subscribe(res => {
+            console.log(res);
+        });
     }
 
 }

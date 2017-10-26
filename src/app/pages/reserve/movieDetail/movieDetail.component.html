@@ -1,10 +1,13 @@
 <div>
-  <app-header title="Movie Detail" showBack="true"></app-header>
+  <app-header [title]="movieDetailData.title" showBack="true"></app-header>
   <div class="main-container">
-    <h1>{{movieDetailData.title}}</h1>
     <div class="img-wrapper">
       <img src="{{movieDetailData.images.medium}}" alt="">
-    </div>  
+    </div>
+    <div class="movie-desc">
+      <p class="movie-desc-title">{{movieDetailData.title}}的故事简介:</p>
+      <p>{{movieDetailData.summary}}</p>
+    </div>
   </div>
 </div>
 

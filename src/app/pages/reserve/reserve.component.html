@@ -27,7 +27,7 @@
             </div>
             <div class="movie-list">
                 <ul class="movie-item-wrapper clearfix">
-                    <li class="movie-item" *ngFor="let freeNewMovie of freeNewMovieData.subject_collection_items">
+                    <li class="movie-item" *ngFor="let freeNewMovie of freeNewMovieData.subject_collection_items" (click)="movieDetail(freeNewMovie.id)">
                         <div>
                             <div class="img-wrapper">
                                 <img src="{{freeNewMovie.cover.url}}">
@@ -46,7 +46,7 @@
             </div>
             <div class="movie-list">
                 <ul class="movie-item-wrapper clearfix">
-                    <li class="movie-item" *ngFor="let newMovie of newMovieData.subject_collection_items">
+                    <li class="movie-item" *ngFor="let newMovie of newMovieData.subject_collection_items" (click)="movieDetail(newMovie.id)">
                         <div>
                             <div class="img-wrapper">
                                 <img src="{{newMovie.cover.url}}">

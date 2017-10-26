@@ -1,17 +1,16 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
-
 import {ReserveComponent} from './reserve.component';
-import {ChildpageComponent} from './childpage/childpage.component';
+import { MovieDetailComponent } from './movieDetail/movieDetail.component';
 
 const routes: Routes = [
     {
         path: '',
-        component: ReserveComponent,
-        children: [
-            {path: 'child', component: ChildpageComponent}
-        ]
+        component: ReserveComponent
     },
+    {
+        path: 'movieDetail/:id', component: MovieDetailComponent
+    }
 ];
 
 @NgModule({

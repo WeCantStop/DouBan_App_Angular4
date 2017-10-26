@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ReserveRoutingModule } from './reserve.routing.module';
 
 import { ReserveComponent } from './reserve.component';
-import { ChildpageComponent } from './childpage/childpage.component';
+import { MovieDetailComponent } from './movieDetail/movieDetail.component';
 import { CommonsModule } from '../../common/commons.module';
 
 @NgModule({
@@ -12,6 +12,6 @@ import { CommonsModule } from '../../common/commons.module';
     ReserveRoutingModule,
     CommonsModule
   ],
-  declarations: [ ReserveComponent, ChildpageComponent ]
+  declarations: [ ReserveComponent, MovieDetailComponent ]
 })
 export class ReserveModule { }

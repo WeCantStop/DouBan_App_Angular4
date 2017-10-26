@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FadeIn } from '../../animations/fadeIn.animation';
 import { ApiService } from '../../services/doubanAPI';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-reserve',
@@ -12,7 +13,7 @@ export class ReserveComponent implements OnInit {
     public  freeNewMovieData;
     public  newMovieData;
     public hotMovieData;
-    constructor(public apiService: ApiService) { }
+    constructor(public apiService: ApiService, public route: Router) { }
 
     ngOnInit() {
         this.hotMovieData = {
@@ -29,11 +30,14 @@ export class ReserveComponent implements OnInit {
         };
         this.apiService.theatreHot({}).subscribe(res => {
             this.hotMovieData = res;
-            this.hotMovieData.subject_collection_items.forEach(element => {
+
+            this.hotMovieData.subject_collection_items.forEach( element => {
                 if (!element.rating){
                     element.rating = {
                         value: '暂无评分'
-                    }
+                    };
+                }else {
+                    element.rating.value = `评分: ${element.rating.value}`;
                 }
             });
         });
@@ -45,4 +49,7 @@ export class ReserveComponent implements OnInit {
         });
     }
 
+    movieDetail(id) {
+        this.route.navigate(['reserve/movieDetail', id]);
+    }
 }

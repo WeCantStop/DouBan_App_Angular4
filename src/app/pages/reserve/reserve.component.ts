@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FadeIn } from '../../animations/fadeIn.animation';
 import { ApiService } from '../../services/doubanAPI';
-import {element} from "protractor";
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-reserve',
@@ -13,7 +13,7 @@ export class ReserveComponent implements OnInit {
     public  freeNewMovieData;
     public  newMovieData;
     public hotMovieData;
-    constructor(public apiService: ApiService) { }
+    constructor(public apiService: ApiService, public route: Router) { }
 
     ngOnInit() {
         this.hotMovieData = {
@@ -48,4 +48,7 @@ export class ReserveComponent implements OnInit {
         });
     }
 
+    movieDetail(id) {
+        this.route.navigate(['reserve/movieDetail', id]);
+    }
 }

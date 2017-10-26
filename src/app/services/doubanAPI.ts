@@ -37,4 +37,7 @@ export class ApiService {
         return this.http.post('http://localhost:3001/api/theatreNew', data).map(res => res.json());
     }
 
+    movieDetail(id): Observable<any> {
+        return this.http.post('http://localhost:3001/api/movieDetail', {id: id}).map(res => res.json());
+    }
 }

@@ -8,7 +8,7 @@
             </div>
             <div class="movie-list">
                 <ul class="movie-item-wrapper clearfix">
-                    <li class="movie-item" *ngFor="let hotMovie of hotMovieData.subject_collection_items">
+                    <li class="movie-item" *ngFor="let hotMovie of hotMovieData.subject_collection_items" (click)="movieDetail(hotMovie.id)">
                         <div>
                             <div class="img-wrapper">
                                 <img src="{{hotMovie.cover.url}}">
@@ -33,6 +33,7 @@
                                 <img src="{{freeNewMovie.cover.url}}">
                             </div>
                             <p class="movie-name">{{freeNewMovie.title}}</p>
+                            <p class="movie-name">评分:{{freeNewMovie.rating.value}}</p>
                         </div>
                     </li>
                 </ul>
@@ -51,6 +52,7 @@
                                 <img src="{{newMovie.cover.url}}">
                             </div>
                             <p class="movie-name">{{newMovie.title}}</p>
+                            <p class="movie-name">评分:{{newMovie.rating.value}}</p>
                         </div>
                     </li>
                 </ul>
